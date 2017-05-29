@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        var scale = 1 / window.devicePixelRatio;
+        document.write(`<meta name="viewport" content="user-scalable=no, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}">`)
+    </script>
     <script>
         var width = document.documentElement.clientWidth;
         var scale = width/320;
         var css = `
         html {
-            font-size: ${320 * scale / 10}px;
+            font-size: ${320 / 10 * window.devicePixelRatio}px;
         }
         `
         document.write(`<style>${css}</style>`);

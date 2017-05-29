@@ -42,6 +42,7 @@ body {
   display: inline-block;
   line-height: 1.25rem;
   height: 1.25rem;
+  border: 1px solid red;
 }
 
 .section2 p {
